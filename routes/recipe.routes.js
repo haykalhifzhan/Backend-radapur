@@ -4,7 +4,7 @@ const Recipe = require('../models/Recipe');
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
   try {
     const recipes = await Recipe.find();
     res.json(recipes);
